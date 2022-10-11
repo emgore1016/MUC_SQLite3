@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Emily/Downloads/RecylerViewRoomDemo/RecylerViewRoomDemo/app/src/main/res/drawable/ic_add_black_24dp.xml" value="0.3245" />
+        <entry key="..\:/Users/Emily/Downloads/RecylerViewRoomDemo/RecylerViewRoomDemo/app/src/main/res/drawable/ic_subtract_black_24dp.xml" value="0.3245" />
+        <entry key="..\:/Users/Emily/Downloads/RecylerViewRoomDemo/RecylerViewRoomDemo/app/src/main/res/layout/activity_main.xml" value="0.335" />
+        <entry key="..\:/Users/Emily/Downloads/RecylerViewRoomDemo/RecylerViewRoomDemo/app/src/main/res/layout/item_homework.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.10673028628829734" />
         <entry key="app/src/main/res/layout/item_choice.xml" value="0.11652435961828227" />
         <entry key="calendarDialogs/src/main/res/layout-land/activity_main.xml" value="0.2150304083405734" />
