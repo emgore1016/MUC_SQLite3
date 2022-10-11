@@ -38,7 +38,7 @@ interface HomeworkDatabaseDao {
      * delete a row from the table [homework_table]
      * that matches the supplied id, primary key.
      */
-    @Query("DELETE FROM homework_table WHERE id= :key")
+    @Query("DELETE FROM homework_table_brodin_gorelik WHERE id= :key")
     suspend fun deleteHomework(key: Long)
 
 
@@ -47,7 +47,7 @@ interface HomeworkDatabaseDao {
      *
      * This does not delete the table, only its contents.
      */
-    @Query("DELETE FROM homework_table")
+    @Query("DELETE FROM homework_table_brodin_gorelik")
     suspend fun deleteAllHomework()
 
 
@@ -56,7 +56,7 @@ interface HomeworkDatabaseDao {
      *
      * Most recent homework first
      */
-    @Query("SELECT * FROM homework_table ORDER BY id DESC")
+    @Query("SELECT * FROM homework_table_brodin_gorelik ORDER BY id DESC")
     suspend fun getAllHomework(): List<Homework>
 
 
@@ -71,7 +71,7 @@ interface HomeworkDatabaseDao {
      * this problem can be potentially solved by using a different Homework entity design
      * e.g., instead of asking sqlite to manage primary key, we manage the id ourselves
      */
-    @Query("SELECT * FROM homework_table ORDER BY id DESC LIMIT 1")
+    @Query("SELECT * FROM homework_table_brodin_gorelik ORDER BY id DESC LIMIT 1")
     suspend fun getMostRecentHomework(): Homework?
 
 
@@ -79,7 +79,7 @@ interface HomeworkDatabaseDao {
     /**
      * Selects and returns the row that matches the supplied id, primary key.
      */
-    @Query("SELECT * from homework_table WHERE id = :key")
+    @Query("SELECT * from homework_table_brodin_gorelik WHERE id = :key")
     suspend fun get(key: Long): Homework?
 
 }

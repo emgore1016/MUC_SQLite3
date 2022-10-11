@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 
 
 // first annotate this to be an entity (a sqlite table)
-@Entity(tableName = "homework_table")
+@Entity(tableName = "homework_table_brodin_gorelik")
 class Homework(
     // note that sqlite will assign the ID to homework insert to the database
     @PrimaryKey(autoGenerate = true)
