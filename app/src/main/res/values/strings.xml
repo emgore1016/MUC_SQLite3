@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">RecyclerView Calendar</string>
+
+    <string name="homework_description_edit_text">Homework Description</string>
+    <string name="homework_title_edit_text">Homework Title</string>
+    <string name="done_button_text">Done</string>
+    <string name="fab_content_description">fab</string>
+    <string name="add_homework">Add Homework</string>
+
+    <string name="title">Homework %d</string>
+    <string name="description">Description %d</string>
+    <string name="update_homework">Update Homework</string>
+</resources>
