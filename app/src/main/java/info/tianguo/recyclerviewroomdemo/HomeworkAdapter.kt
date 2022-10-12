@@ -40,6 +40,7 @@ class HomeworkAdapter(val activity: Activity, private val homework: List<Homewor
         private val titleText: TextView
         private val descText: TextView
         private val launchButton: Button
+        private val updateButton: Button
 
         private val dateText: TextView
         private val cardView: CardView
@@ -66,6 +67,12 @@ class HomeworkAdapter(val activity: Activity, private val homework: List<Homewor
                 startTime.show()
             }
 
+            updateButton.setOnClickListener {
+                Log.d(TAG, "button pressed")
+                val mainActivity: MainActivity = activity as MainActivity
+                mainActivity.updateHomework(position, homework)
+            }
+
             cardView.setOnLongClickListener {
                 Toast.makeText(activity,"long clicked", Toast.LENGTH_SHORT).show()
                 // start the pre-filled addHomeworkActivity
@@ -81,6 +88,7 @@ class HomeworkAdapter(val activity: Activity, private val homework: List<Homewor
             titleText = itemView.findViewById(R.id.item_title)
             descText = itemView.findViewById(R.id.item_description)
             launchButton = itemView.findViewById(R.id.item_launch_button)
+            updateButton = itemView.findViewById(R.id.item_launch_button3)
             cardView = itemView.findViewById(R.id.cardview)
             dateText = itemView.findViewById(R.id.item_date)
         }
