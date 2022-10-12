@@ -82,6 +82,15 @@ class DataSource private constructor(
         removeHomework(homework)
     }
 
+    suspend fun deleteAllHomework(){
+        while (getMostRecentHomeworkFromDB() != null) {
+            val hw = getMostRecentHomeworkFromDB()
+            if (hw != null) {
+                deleteHomework(hw)
+            }
+        }
+    }
+
 
 
     private suspend fun getHomeworkFromDB(id: Long): Homework?{

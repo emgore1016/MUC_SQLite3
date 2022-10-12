@@ -47,6 +47,16 @@ class MainActivity : AppCompatActivity() {
             fabOnClick()
         }
 
+        val delete_button: View = findViewById(R.id.button)
+        delete_button.setOnClickListener {
+            // delete is quite easy
+            // delete from db and also update the livedata
+            // use [GlobalScope] to make sure the delete from db completes even if the activity is destroyed
+            GlobalScope.launch(Dispatchers.IO) {
+                deleteOnClick()
+            }
+        }
+
         setRecyclerViewItemTouchListener()
     }
 
@@ -93,6 +103,24 @@ class MainActivity : AppCompatActivity() {
     fun fabOnClick() {
         val intent = Intent(this, AddOrUpdateHomeWorkActivity::class.java)
         resultLauncher.launch(intent)
+    }
+
+    fun deleteOnClick() {
+        val hwCount = dataSource.getHomeworkList().value?.size
+        var count = 0
+
+        while (count < hwCount!!) {
+            var currentHomework: Homework? =  dataSource.getHomeworkList().value?.get(count)
+            if (currentHomework != null){
+                // delete is quite easy
+                // delete from db and also update the livedata
+                // use [GlobalScope] to make sure the delete from db completes even if the activity is destroyed
+                GlobalScope.launch(Dispatchers.IO) {
+                    dataSource.deleteHomework(currentHomework)
+                }
+            }
+            count++
+        }
     }
 
     /**
